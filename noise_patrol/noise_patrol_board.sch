@@ -7254,12 +7254,15 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <part name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M1206" package3d_urn="urn:adsk.eagle:package:23566/2" value="100k"/>
 <part name="GND4" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND5" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="R12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M1206" package3d_urn="urn:adsk.eagle:package:23566/2" value="100k"/>
+<part name="R12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M1206" package3d_urn="urn:adsk.eagle:package:23566/2" value="1k"/>
 <part name="X1" library="con-wago-508" library_urn="urn:adsk.eagle:library:196" deviceset="W237-09P" device="" package3d_urn="urn:adsk.eagle:package:10748/1"/>
 <part name="SUPPLY5" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
 <part name="R13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M1206" package3d_urn="urn:adsk.eagle:package:23566/2" value="10k"/>
 <part name="S1" library="SparkFun-Switches" deviceset="MOMENTARY-SWITCH-SPST" device="-PTH-6.0MM" value="Reset button "/>
 <part name="GND6" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="SUPPLY6" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
+<part name="GND7" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="SUPPLY7" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7421,6 +7424,15 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 </instance>
 <instance part="GND6" gate="1" x="149.86" y="55.88" smashed="yes">
 <attribute name="VALUE" x="149.86" y="55.626" size="1.778" layer="96" font="vector" align="top-center"/>
+</instance>
+<instance part="SUPPLY6" gate="G$1" x="167.64" y="2.54" smashed="yes">
+<attribute name="VALUE" x="167.64" y="5.334" size="1.778" layer="96" font="vector" align="bottom-center"/>
+</instance>
+<instance part="GND7" gate="1" x="167.64" y="-2.54" smashed="yes">
+<attribute name="VALUE" x="167.64" y="-2.794" size="1.778" layer="96" font="vector" align="top-center"/>
+</instance>
+<instance part="SUPPLY7" gate="G$1" x="162.56" y="68.58" smashed="yes">
+<attribute name="VALUE" x="162.56" y="71.374" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
 </instances>
 <busses>
@@ -7615,6 +7627,16 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <wire x1="22.86" y1="43.18" x2="22.86" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="40.64" x2="27.94" y2="40.64" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="D1" gate="1" pin="C"/>
+<wire x1="167.64" y1="60.96" x2="167.64" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="66.04" x2="162.56" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="X1" gate="-2" pin="KL"/>
+<pinref part="SUPPLY7" gate="G$1" pin="5V"/>
+<wire x1="162.56" y1="66.04" x2="157.48" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="68.58" x2="162.56" y2="66.04" width="0.1524" layer="91"/>
+<junction x="162.56" y="66.04"/>
+</segment>
 </net>
 <net name="N$18" class="0">
 <segment>
@@ -7736,14 +7758,6 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <wire x1="167.64" y1="50.8" x2="167.64" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="X1" gate="-1" pin="KL"/>
 <junction x="157.48" y="50.8"/>
-</segment>
-</net>
-<net name="N$26" class="0">
-<segment>
-<pinref part="D1" gate="1" pin="C"/>
-<wire x1="167.64" y1="60.96" x2="167.64" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="167.64" y1="66.04" x2="157.48" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="X1" gate="-2" pin="KL"/>
 </segment>
 </net>
 <net name="N$27" class="0">
